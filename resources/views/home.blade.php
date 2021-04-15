@@ -19,7 +19,7 @@
             <td>{{$pc->product->barcode}}</td>
             <td>{{$pc->total}}</td>
             <td>{{$pc->totalprice}}</td>
-            <td>{{$pc->status_total}}</td>
+            <td>{{$pc->totalstatus}}</td>
         </tr>
         @endforeach
         {{-- {{$productcounts}} --}}
