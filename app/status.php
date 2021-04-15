@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class status extends Model
 {
-    public function products()
+    public function product_list()
     {
-        return $this->hasMany(product::class);
+        return $this->hasMany(product_list::class);
     }
 }

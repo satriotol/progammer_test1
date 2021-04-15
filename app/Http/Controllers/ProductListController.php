@@ -17,7 +17,8 @@ class ProductListController extends Controller
      */
     public function index()
     {
-        //
+        $product_lists = product_list::all();
+        return view('ProductList.index')->with('product_lists',$product_lists);
     }
 
     /**
@@ -29,7 +30,7 @@ class ProductListController extends Controller
     {
         $products = product::all();
         $statuses = status::all();
-        return view('productlist.create')->with('products',$products)->with('statuses', $statuses);
+        return view('ProductList.create')->with('products',$products)->with('statuses', $statuses);
     }
 
     /**
@@ -41,11 +42,11 @@ class ProductListController extends Controller
     public function store(CreateProductListRequest $request)
     {
         product_list::create([
-            'product' => $request->product,
+            'product_id' => $request->product_id,
             'price' => $request->price,
-            'status' => $request->status
+            'status_id' => $request->status_id
         ]);
-        return redirect(route('ProductList.create'));
+        return redirect(route('productlist.index'));
     }
 
     /**

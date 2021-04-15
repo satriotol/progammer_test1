@@ -24,9 +24,9 @@ class CreateProductListRequest extends FormRequest
     public function rules()
     {
         return [
-            'product' => 'required',
+            'product_id' => 'required',
             'price' => 'required|numeric',
-            'status' => 'required'
+            'status_id' => 'required'
         ];
     }
 }
