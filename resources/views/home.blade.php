@@ -22,7 +22,6 @@
             <td>{{$pc->totalstatus}}</td>
         </tr>
         @endforeach
-        {{-- {{$productcounts}} --}}
     </tbody>
 </table>
 @endsection
